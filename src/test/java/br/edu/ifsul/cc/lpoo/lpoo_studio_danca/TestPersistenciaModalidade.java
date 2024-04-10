@@ -1,4 +1,4 @@
-package br.edu.ifsul.cc.lpoo.lpoo_sistema_compras;
+package br.edu.ifsul.cc.lpoo.lpoo_studio_danca;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
