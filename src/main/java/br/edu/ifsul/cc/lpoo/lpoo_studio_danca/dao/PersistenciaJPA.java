@@ -12,16 +12,16 @@ import javax.persistence.Persistence;
  *
  * @author damen
  */
-public class PersistenciaJPA implements InterfacePersistencia{
+public class PersistenciaJPA implements InterfacePersistencia {
 
     EntityManager entity;
     EntityManagerFactory factory;
-    
-    public PersistenciaJPA(){
+
+    public PersistenciaJPA() {
         factory = Persistence.createEntityManagerFactory("pu_studio_danca");
         entity = factory.createEntityManager();
-    }   
-    
+    }
+
     @Override
     public Boolean conexaoAberta() {
         return entity.isOpen();
@@ -50,5 +50,5 @@ public class PersistenciaJPA implements InterfacePersistencia{
         entity.remove(o);
         entity.getTransaction().commit();
     }
-    
+
 }

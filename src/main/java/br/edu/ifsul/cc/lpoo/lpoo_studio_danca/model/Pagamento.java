@@ -20,28 +20,28 @@ import javax.persistence.Temporal;
  * @author damen
  */
 @Entity
-public class Pagamento implements Serializable{
+public class Pagamento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    
+
     @Column(nullable = false)
     @Temporal(javax.persistence.TemporalType.DATE)
     private Calendar dataVcto;
-    
+
     private Double valor;
-    
+
     @Temporal(javax.persistence.TemporalType.DATE)
     private Calendar dataPgto;
-    
+
     @ManyToOne
-    @JoinColumn(name="contrato_id")
+    @JoinColumn(name = "contrato_id")
     private Contrato contrato;
-    
-    public Pagamento(){
+
+    public Pagamento() {
     }
-    
-    public void gerarPagamento(Integer mesRef ){
+
+    public void gerarPagamento(Integer mesRef) {
     }
 
     public Integer getId() {
@@ -83,6 +83,5 @@ public class Pagamento implements Serializable{
     public void setContrato(Contrato contrato) {
         this.contrato = contrato;
     }
-    
-    
+
 }

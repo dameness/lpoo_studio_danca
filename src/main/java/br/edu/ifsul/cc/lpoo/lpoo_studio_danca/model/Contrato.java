@@ -1,7 +1,5 @@
 package br.edu.ifsul.cc.lpoo.lpoo_studio_danca.model;
 
-
-import br.edu.ifsul.cc.lpoo.lpoo_studio_danca.model.FormaPgto;
 import java.io.Serializable;
 import java.util.Calendar;
 import javax.persistence.Column;
@@ -11,7 +9,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
 /*
@@ -28,16 +25,16 @@ public class Contrato implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    
-    @Column(nullable=false)
+
+    @Column(nullable = false)
     @Temporal(javax.persistence.TemporalType.DATE)
     private Calendar dataInicio;
-    
+
     private Double valorDesconto;
-    
+
     @Enumerated(EnumType.STRING)
     private FormaPgto formaPgto;
- 
+
     public Contrato() {
         dataInicio = Calendar.getInstance();
     }
@@ -74,11 +71,4 @@ public class Contrato implements Serializable {
         this.formaPgto = formaPgto;
     }
 
-    
-    
-
-   
-    
-    
-    
 }

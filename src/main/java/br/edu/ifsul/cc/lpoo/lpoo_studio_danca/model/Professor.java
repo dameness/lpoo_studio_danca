@@ -16,7 +16,7 @@ import javax.persistence.Temporal;
 @Entity
 @DiscriminatorValue("P")
 public class Professor extends Pessoa {
-    
+
     @Temporal(javax.persistence.TemporalType.DATE)
     private Calendar dataAdmissao;
 
@@ -30,6 +30,5 @@ public class Professor extends Pessoa {
     public void setDataAdmissao(Calendar dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
-    
-    
+
 }

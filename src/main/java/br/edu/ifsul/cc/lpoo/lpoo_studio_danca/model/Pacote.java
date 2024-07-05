@@ -12,30 +12,30 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 /**
  *
  * @author damen
  */
 @Entity
-public class Pacote implements Serializable{
+public class Pacote implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    
-    @Column(nullable=false, length=120)
+
+    @Column(nullable = false, length = 120)
     private String descricao;
-    
-    @Column(nullable=false)
+
+    @Column(nullable = false)
     private Double valor;
-    
+
     @ManyToOne
-    @JoinColumn(name="modalidade_id")
+    @JoinColumn(name = "modalidade_id")
     private Modalidade modalidade;
 
     public Pacote() {
     }
+
     public Integer getId() {
         return id;
     }
@@ -59,7 +59,7 @@ public class Pacote implements Serializable{
     public void setValor(Double valor) {
         this.valor = valor;
     }
-    
+
     public Modalidade getModalidade() {
         return modalidade;
     }
@@ -67,7 +67,5 @@ public class Pacote implements Serializable{
     public void setModalidade(Modalidade modalidade) {
         this.modalidade = modalidade;
     }
-    
-    
 
 }

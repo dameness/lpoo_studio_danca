@@ -1,6 +1,5 @@
 package br.edu.ifsul.cc.lpoo.lpoo_studio_danca.model;
 
-
 import java.io.Serializable;
 import java.util.Calendar;
 import javax.persistence.DiscriminatorColumn;
@@ -21,7 +20,7 @@ import javax.persistence.Temporal;
  */
 @Entity
 @DiscriminatorColumn(name = "tipo")
-public abstract class Pessoa implements Serializable{
+public abstract class Pessoa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
@@ -82,7 +81,5 @@ public abstract class Pessoa implements Serializable{
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    
-    
-    
+
 }

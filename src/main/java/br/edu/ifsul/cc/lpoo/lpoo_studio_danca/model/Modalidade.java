@@ -17,12 +17,12 @@ import javax.persistence.Id;
  */
 @Entity
 public class Modalidade implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    
-    @Column(nullable=false, length=100)
+
+    @Column(nullable = false, length = 100)
     private String descricao;
 
     public Modalidade() {
@@ -43,5 +43,5 @@ public class Modalidade implements Serializable {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
+
 }
