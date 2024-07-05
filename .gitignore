@@ -1,0 +1,24 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#VSCode
+.vscode/
+
+# Maven
+log/
+target/
+
+# Inclusions
+!lib/**
+
+# Compiled Files
+*.class
+bin/
+build/
+/bin1/
+java/build/**
+
+
+src/main/resources
