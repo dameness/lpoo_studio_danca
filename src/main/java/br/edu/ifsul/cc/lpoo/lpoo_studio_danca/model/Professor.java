@@ -26,8 +26,10 @@ public class Professor extends Pessoa {
     @OneToMany
     private Collection<Modalidade> modalidades;
 
+    // colooquei também o atributo de professor na folha de pagamento
+    // transformando em uma agregação
     @OneToMany(mappedBy = "professor")
-    private Collection<FolhaPagamento> folhaPagamento;
+    private Collection<FolhaPagamento> folhasPagamento;
 
     public Professor() {
     }
@@ -49,11 +51,11 @@ public class Professor extends Pessoa {
     }
 
     public Collection<FolhaPagamento> getFolhaPagamento() {
-        return folhaPagamento;
+        return folhasPagamento;
     }
 
-    public void setFolhaPagamento(Collection<FolhaPagamento> folhaPagamento) {
-        this.folhaPagamento = folhaPagamento;
+    public void setFolhaPagamento(Collection<FolhaPagamento> folhasPagamento) {
+        this.folhasPagamento = folhasPagamento;
     }
 
 }
