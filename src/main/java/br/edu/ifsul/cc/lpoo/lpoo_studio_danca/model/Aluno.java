@@ -21,6 +21,7 @@ public class Aluno extends Pessoa {
     private Integer diaPgto;
 
     public Aluno() {
+        dataInicio = Calendar.getInstance();
     }
 
     public Calendar getDataInicio() {
