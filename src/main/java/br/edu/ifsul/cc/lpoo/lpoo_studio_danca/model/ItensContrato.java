@@ -5,6 +5,10 @@
 package br.edu.ifsul.cc.lpoo.lpoo_studio_danca.model;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -12,8 +16,14 @@ import javax.persistence.ManyToOne;
  *
  * @author damen
  */
+
+@Entity
 public class ItensContrato implements Serializable {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
+
     @ManyToOne
     @JoinColumn(name="contrato_id")
     private Contrato contrato;
@@ -24,6 +34,16 @@ public class ItensContrato implements Serializable {
 
     public ItensContrato() {
     }
+    
+    
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    
 
     public Contrato getContrato() {
         return contrato;
