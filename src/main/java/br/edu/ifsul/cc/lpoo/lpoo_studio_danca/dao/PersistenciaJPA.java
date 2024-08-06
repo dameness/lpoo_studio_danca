@@ -5,6 +5,7 @@
 package br.edu.ifsul.cc.lpoo.lpoo_studio_danca.dao;
 
 import br.edu.ifsul.cc.lpoo.lpoo_studio_danca.model.Modalidade;
+import br.edu.ifsul.cc.lpoo.lpoo_studio_danca.model.Professor;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -56,5 +57,10 @@ public class PersistenciaJPA implements InterfacePersistencia {
     public List<Modalidade> getModalidades(){  
         return entity.createQuery("select m from Modalidade m", Modalidade.class).getResultList();
     }
+    
+     public List<Professor> getProfessores(){  
+        return entity.createQuery("select m from Professor m", Professor.class).getResultList();
+    }
+
 
 }

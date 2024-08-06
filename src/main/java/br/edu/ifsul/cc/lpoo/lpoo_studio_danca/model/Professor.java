@@ -57,5 +57,10 @@ public class Professor extends Pessoa {
     public void setFolhaPagamento(Collection<FolhaPagamento> folhasPagamento) {
         this.folhasPagamento = folhasPagamento;
     }
+    
+    @Override
+    public String toString(){
+        return this.getNome();
+    }
 
 }
